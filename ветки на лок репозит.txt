@@ -1,0 +1,51 @@
+GitHub.git 
+находясь в папке /group_30/test.git/group_30  ветка  (main) сделали ветки
+
+1. git branch                                              - посмотреть на какой ветке я сижу
+2. git branch payments                           - создать локально еще одну ветку
+3. git checkout -b ad                                -создать ветку ad и сразу перейти в нее
+4. cat >> images.txt
+5. git add .
+6. git status
+7. git commiy -m "add__"
+8. git checkout main                                - перейти на ветку main 
+9. git merge ad -m "merge_ad"            - на ветке вмержить main данные ветки ad
+создаем конфликт
+10. vim images.txt                                (в поле 4 на ветке мейн и ад ввести разное
+11. git add .                                                   значение и вызвать конфликт)
+12. git commit -m "add"
+13. git checkout ad 
+14. vim images.txt
+15. git commit -am "add//"
+
+16. git checkout main
+17. git merge ad -m "merge" (conflikt)
+18. vim images.txt                                      - редактировать конфликт
+19. git commit -am "conflict"
+20. git push
+
+21. gi t push -u origin ad
+22. git checkout ad
+23. cat >> images.txt 
+24. git commit -am "add img"
+25. git push
+
+на внешнем делаем изменения  (мержим с мейн на ад изменения через
+26. git checkout main                              пул реквест)
+27. git fetch
+28. git pull
+29. cat images.txt
+
+
+Ошибки и решение:
+
+fatal: Feature/Name cannot be resolved to branch
+Search online for this issue, find some stuff about ensuring HEAD
+ is correct, others about making sure I've got my branch name case
+ correct (though, at this point the branch doesn't exist on the remote yet).
+ Unable to resolve.
+
+Ran this command:
+
+git push --all -u
+Помошло запушить ветку 
