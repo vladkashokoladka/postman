@@ -15,14 +15,9 @@ if(age && !isNaN(age)) {
    }
 } else console.log('Not an integer value')
 }
-checkAge(17)
-checkAge(18)
-checkAge(60)
-checkAge(61)
-checkAge("aaa")
-checkAge("20")
-checkAge("0")
-checkAge(" ")
+
+checkAge('17')
+
 
 
  
